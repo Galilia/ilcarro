@@ -1,0 +1,77 @@
+<div class="search_cars">
+
+  <div class="selMenu">
+    <div id="selMenu1" (click)="goToSearchPage();" >
+      <img id="imageInSelMenu1" src="assets/icons/search-icon.png">
+      <div class="textSelMenu" >Search</div>
+    </div>
+
+    <div id="selMenu2" (click)="goToFilterPage();" >
+      <img id="imageInSelMenu2" src="assets/icons/settings_icon.png" >
+    </div>
+
+    <div id="selMenu3" (click)="goToMapPage();" >
+      <img id="imageInSelMenu3" src="assets/icons/coord-icon.png">
+    </div>
+  </div>
+  <div id="selMenuLine"></div>
+
+<!--  <app-nav-search></app-nav-search>-->
+
+  <div class="searchAndCars" >
+    <div class="reg" [ngSwitch]="currentSubMenu">
+
+<!--      SEARCH        -->
+      <div *ngSwitchDefault style = "padding-left: 20%; alignment: center">
+        <p class="regLogSignTopHeader" style="margin-bottom: 20px;">Find your car now!</p>
+        <input type="text" id="location" placeholder="Location">
+        <input type="text" id="from" placeholder="From">
+        <input type="text" id="till" placeholder="Till">
+        <br>
+        <br>
+        <p class="pSearch" style="color: #6C7E8B;">Sort by</p>
+        <div id="priceSortSel">
+          <div id="priceSortLowHigh"><p class="pSearch">Price (low to high)</p></div>
+          <div id="priceSortHighLow"><p class="pSearch">Price (high to low)</p></div>
+        </div>
+        <div>
+            <br><br><br><br>
+            <div id="range_price">
+              <span>Price range ($/per day):</span>
+              <input type="text" id="amount" readonly>
+              <br><br>
+              <div id="slider-range"></div>
+
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+      </div>
+
+<!--      FILTERS        -->
+      <div *ngSwitchCase="'filters'" style = "padding-left: 20%; alignment: center">
+        <p class="regLogSignTopHeader" style="margin-bottom: 20px;">Find your car now!</p>
+        <li><input type="text" list="" placeholder="Make"></li>
+        <li><input type="text" list="" placeholder="Model"></li>
+        <li><input type="text" list="" placeholder="Year"></li>
+        <li><input type="text" list="" placeholder="Engine"></li>
+        <li><input type="text" list="" placeholder="Fuel"></li>
+        <li><input type="text" list="" placeholder="Transmission"></li>
+        <li><input type="text" list="" placeholder="WD"></li>
+        <li><input type="text" list="" placeholder="Horsepower"></li>
+        <li><input type="text" list="" placeholder="Fuel consumption"></li>
+      </div>
+
+<!--      MAP         -->
+      <div *ngSwitchCase="'map'">
+        <img src="assets/images/map.png" style="width: 600px; height: 900px">
+      </div>
+      <div id="l1" style="bottom: 0; margin-right: 10px;"></div>
+    </div>
+
+    <app-gallery></app-gallery>
+  </div>
+
+</div>

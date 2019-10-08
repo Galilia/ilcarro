@@ -1,0 +1,240 @@
+.base {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+}
+
+/*Style for blocks with information under registration form*/
+.about {
+  position: relative;
+  background-color: #062639;
+  width: 1920px;
+  height: 266px;
+  padding-top: 20px;
+}
+
+.cornerLine {
+  background: #EA2340;
+  width: 1700px;
+  max-width: 100%;
+  height: 24px;
+  margin-bottom: 50px;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 95% 0);
+  /*clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);*/
+
+}
+
+.threeTexts {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.bigtext {
+  padding-left: 150px;
+  width: 30% ;
+  font: Bold 44px/54px Bebas Neue;
+  letter-spacing: 0;
+  color: white;
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+.desctext {
+  width: 35% ;
+  font: 16px/24px Raleway;
+  letter-spacing: 0;
+  color: white;
+}
+
+.righttext {
+  padding-left: 150px;
+  width: 30% ;
+  font: 32px/32px Raleway;
+  letter-spacing: 0;
+  color: #EA2340;
+}
+
+.join {
+  border: 0;
+  width: 146px;
+  height: 48px;
+  position: relative;
+  /*left: 55px;*/
+  bottom: 20px;
+  font: 700 18px Raleway;
+  padding: 5px;
+  color: white;
+  background: #EA2340 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000052;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+/*Styles for blocks with TOP 3 cars TEXT*/
+
+.mostpopular {
+  display: flex;
+  background-color: white;
+  width: 1920px;
+  height: 300px;
+  align-items: center;
+}
+
+.numbertext {
+  color: #EA2340;
+  font-size: 149px;
+  padding-left: 150px;
+}
+/*Styles for blocks with TOP 3 cars IMAGES*/
+
+.carsBlue {
+  position: relative;
+  background-color: #062639;
+  width: 1920px;
+  height: 553px;
+  z-index: -1;
+}
+
+.carsRed {
+  background-color: #EA2340;
+  width: 100%;
+  height: 480px;
+  padding-top: 20px;
+  -webkit-clip-path: polygon(94% 0, 100% 25%, 100% 100%, 6% 100%, 0% 76%, 0 0);
+}
+
+.carsRed img {
+  position: absolute;
+  width: 1051px;
+  height: 413px;
+  margin: 0 0 0 -220px;
+}
+
+.topImg1 {
+}
+.topImg2 {
+  left: 33%;
+}
+.topImg3 {
+  left: 66%;
+}
+
+/*Styles for blocks with TOP 3 PRICES*/
+
+.carsPrices {
+  display: flex;
+  margin-top: -70px;
+  width: 1920px;
+}
+
+.topPrice1, .topPrice2, .topPrice3 {
+  width: 194px;
+  height: 91px;
+  background: white;
+  margin: auto;
+  box-shadow:  0px 3px 6px #00000052;
+  display: flex;
+}
+
+.currency {
+  font: Bold 31px/102px Raleway;
+  text-align: center;
+  color: #EA2340;
+  width: 20%;
+}
+
+.amount {
+  font: Bold 88px/106px Bebas Neue;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #EA2340;
+  text-align: center;
+  width: 40%;
+
+}
+
+.perDay {
+  font: Bold 24px/29px Bebas Neue;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #06263998;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  padding: 10px;
+  width: 40%;
+}
+
+
+/*Styles for blocks with feedback's*/
+
+.feed_main {
+  width: 1920px;
+  height: 650px;
+  overflow: hidden;
+  margin-bottom: 100px;
+
+}
+
+
+.bigText {
+  width: 30% ;
+  font: Bold 44px/54px Bebas Neue;
+  letter-spacing: 0;
+  color: white;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  padding: 50px 0;
+  margin-left: 60px;
+
+}
+
+.feed_main #feed_head #feed_head_text {
+  position: relative;
+  width: 366px;
+  height: 109px;
+  left: 14%;
+}
+
+.feeds_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feeds_list .feed_user {
+  padding: 25px 25px 25px 25px;
+  flex-basis: calc(50% - 270px);
+  height: 100px;
+}
+
+.feed_user img {
+  border-radius: 90px;
+  float: left;
+  margin-right: 10px;
+}
+
+.feed_user .feed_text {
+  display: block;
+  width: 520px;
+  height: 50px;
+  font: 400 16px/24px Raleway;
+}
+
+.feed_user .name_user {
+  font: Bold 16px/24px Raleway;
+  color: #EA2340;
+  padding-top: 20px;
+  padding-right: 50px;
+  float: left;
+}
+
+.feed_user .feed_date {
+  margin-top: 20px;
+  color: #06263998;
+  font: 400 13px/24px Raleway;
+}
+

@@ -1,0 +1,207 @@
+
+::-webkit-input-placeholder {
+  color: #06263998;
+}
+
+#foto_form {
+  display: flex;
+  width: 1920px;
+}
+
+#foto_form #left_container {
+  flex: 4;
+  overflow: hidden;
+  padding-left: 50px;
+}
+
+#foto_form #foto {
+  width: 90%;
+  height: 600px;
+  padding: 100px 0 0 8%;
+}
+
+#foto_form #right_container {
+  margin-top: 100px;
+  display: grid;
+  flex: 2;
+}
+
+#foto_form #foto p {
+  padding-left: 12%;
+  font: Bold 54px/66px Bebas Neue;
+  color: #062639;
+}
+
+#foto_form #foto p span {
+  font: Bold 32px/38px Bebas Neue;
+  color: #06263998;
+  padding-left: 5px;
+}
+
+#foto_form #foto_price {
+  position: absolute;
+  left: 53vw;
+  bottom: 10%;
+  width: 175px;
+  height: 95px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000052;
+  font: Bold 88px Bebas Neue;
+  color: #062639;
+}
+
+#foto_form #foto_price sup {
+  font: Bold 31px Raleway;
+}
+
+#foto_form #foto_price span {
+  display: block;
+  width: 60px;
+  float: right;
+  margin-top: -70px;
+  font: Bold 24px/29px Bebas Neue;
+  color: #06263998;
+  transform: rotate(270deg);
+}
+
+#left_container #foto_stars {
+  margin-left: -50px;
+  width: 420px;
+  height: 30px;
+  background-color: #EA2340;
+  clip-path: polygon(0 0, 100% 0, 87% 100%, 0 100%);
+  text-align: right;
+  padding: 0 75px 10px;
+}
+
+#foto_stars #stars {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+#foto_stars #trips {
+  margin-left: 20px;
+  font: 400 13px/24px Raleway;
+  color: #FFFFFF;
+}
+
+#car_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(115px, auto);
+  padding: 0 5vw 0 10vw;
+}
+
+#car_info div{
+  font: 400 16px/24px Raleway;
+  margin: 50px 0 0 0;
+}
+
+#car_info #general{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box_name{
+  text-align: right;
+  padding-right: 20px;
+  color: #06263998;
+}
+
+#car_info #location, #features{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#car_info #about{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#feedback{
+  margin: 10vh 0 0 10vw;
+}
+
+#feedback .feed_user {
+  padding: 25px 25px 25px 25px;
+}
+
+.feed_user img {
+  border-radius: 90px;
+  float: left;
+  margin-right: 10px;
+}
+
+.feed_user .feed_text {
+  display: block;
+  width: 520px;
+  height: 50px;
+  font: 400 16px/24px Raleway;
+}
+
+.feed_user .name_user {
+  font: Bold 16px/24px Raleway;
+  color: #EA2340;
+  padding-top: 20px;
+  padding-right: 50px;
+  float: left;
+}
+
+.feed_user .feed_date {
+  margin-top: 20px;
+  color: #06263998;
+  font: 400 13px/24px Raleway;
+}
+
+
+/*Block right side with search form ang Google Maps*/
+
+#right_container #map{
+  margin-top: -400px;
+  width: 680px;
+  height: 530px;
+  background-image: url("src/assets/images/map.png");
+  box-shadow: 0px 3px 6px #0000005F;
+}
+
+#search_form {
+  height: 590px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #0000005F;
+  padding: 0 0 0 50px;
+}
+
+#search_form #rw_1 {
+  display: block;
+  width: 220px;
+  height: 70px;
+  font: 900 32px Raleway;
+  color: #EA2340;
+  padding-left: 20px;
+  padding-top: 50px;
+}
+
+#search_form li {
+  margin: 20px;
+}
+
+#search_form ul input {
+  width: 371px;
+  height: 46px;
+  border: 1px solid #5F727E;
+  text-align: left;
+  padding: 2px;
+  font: normal 13px/24px Raleway;
+  letter-spacing: 0;
+  color: #06263998;
+}
+
+#search_form button {
+  width: 170px;
+  height: 45px;
+  background-color: #EA2340;
+  font: 700 18px Raleway;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+}

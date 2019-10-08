@@ -1,0 +1,53 @@
+#main_form {
+  width: 1920px;
+  /*float: left;*/
+  background: white;
+}
+
+#main_form #titl_1 {
+  width: 255px;
+  font: 900 32px/59px Raleway;
+  letter-spacing: 0;
+  color: #EA2340;
+  padding-top: 8%;
+}
+
+#main_form #titl_2 {
+  padding-top: 20px;
+  width: 650px;
+  font: 400 16px/24px Raleway;
+  letter-spacing: 0;
+  color: #062639;
+}
+
+#main_form div p {
+  color: #062639;
+  font: 400 24px/24px Raleway;
+  margin-bottom: 40px;
+  padding-top: 60px;
+}
+
+#main_form input {
+  width: 325px;
+  /*height: 45px;*/
+  margin-bottom: 20px;
+  border: 1px solid #5F727E;
+  padding: 25px 20px 10px 10px;
+}
+
+#main_form textarea {
+  width: 730px;
+  height: 310px;
+  resize: none;
+  padding: 25px 20px 10px 10px;
+}
+
+#main_form button {
+  width: 190px;
+  height: 50px;
+  background-color: #EA2340;
+  box-shadow: 0px 3px 6px #00000052;
+  font: bold 18px Raleway;
+  color: white;
+  margin: 150px 0 200px 0;
+}

@@ -1,0 +1,70 @@
+.image_reg {
+  position: relative;
+  display: flex;
+  width: 1920px;
+  height: 750px;
+
+}
+
+.main-image {
+  width: 100%;
+  margin-left: -30%;
+}
+.reg {
+  width: 30%;
+  height: 750px;
+  background-color: white;
+  box-shadow: 0px 3px 6px #0000005F;
+  overflow: hidden;
+}
+
+#signUpForm {
+  height: 700px;
+}
+
+input[type=text], select {
+  width: 400px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  border: 1px solid #5F727E;
+  box-sizing: border-box;
+  padding: 25px 20px 10px 10px;
+}
+
+
+.regLogSignTopHeader, .regLogSignBotHeader {
+  padding-left: 50px;
+}
+
+button {
+  border: 0;
+  width: 146px;
+  height: 48px;
+  position: relative;
+  left: 50px;
+  bottom: 20px;
+  font: 700 18px Raleway;
+  padding: 5px;
+  color: white;
+  background: #EA2340 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000052;
+  cursor: pointer;
+}
+
+.pClass {
+  margin-top:50px;
+  margin-bottom: 100px;
+  padding-left: 50px;
+}
+
+#reg_check {
+  padding: 0 0 0 20px;
+  font: 400 13px/24px Raleway;
+  color: #06263998;
+}
+
+#l1{
+  margin-top: 4%;
+  margin-left: 4%;
+}
+

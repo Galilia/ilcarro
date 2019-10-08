@@ -1,0 +1,167 @@
+search_cars {
+  position: relative;
+  width: 1920px;
+  height: 600px;
+  overflow: hidden;
+}
+
+/*==============Nav Menu for search filters map Styles=================*/
+/*==============MENU SEARCH FILTERS MAP================*/
+.selMenu {
+  width: 600px;
+  clip-path: polygon(0 0, 85% 0%, 100% 100%, 0 100%);
+  display: flex;
+  margin-top: 50px;
+}
+
+#selMenu1 {
+  width: 300px;
+  height: 50px;
+  background: #EA2340 0% 0% no-repeat padding-box;
+  clip-path: polygon(0 0, 85% 0%, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+}
+
+#selMenu2, #selMenu3 {
+  width: 150px;
+  height: 40px;
+  clip-path: polygon(0 0, 76% 0, 100% 100%, 24% 100%);
+  margin-top: 8px;
+}
+
+#selMenu2 {
+  background: #062639 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  margin-left: -38px;
+}
+
+
+#selMenu3 {
+  background: #6C7E8B 0% 0% no-repeat padding-box;
+  margin-left: -33px;
+}
+
+#selMenuLine {
+  background: #EA2340 0% 0% no-repeat padding-box;
+  width: 600px;
+  height: 7px;
+}
+
+#imageInSelMenu1, #imageInSelMenu2, #imageInSelMenu3 {
+  width: 25px; height: 25px;
+}
+
+#imageInSelMenu1 {
+  padding-left: 180px;
+}
+
+#imageInSelMenu2 {
+  padding-left: 85px; padding-top: 8px
+}
+
+#imageInSelMenu3 {
+  padding-left: 85px; padding-top: 8px
+}
+
+.textSelMenu {
+  padding-left: 5px;
+  height: 25px;
+  font: 13px/24px Raleway;
+  color: #FFFFFF;
+}
+
+
+/*==============Searching Menu Styles=================*/
+
+.searchAndCars {
+  width: 1920px;
+  display: flex;
+  /*height: 600px;*/
+}
+
+.reg {
+  width: 600px;
+  height: 950px;
+  background-color: white;
+  box-shadow: 0px 3px 6px #0000005F;
+}
+
+
+input[type=text], select {
+  width: 350px;
+  padding: 12px 20px;
+  /*margin-top: 8px;*/
+  margin-bottom: 8px;
+  /*margin-left: 80px;*/
+  border: 1px solid #5F727E;
+  box-sizing: border-box;
+  padding: 25px 20px 10px 10px;
+  font-family: Raleway;
+  font-size: 13px;
+  color: #06263998;
+}
+
+#priceSortSel {
+  display: flex;
+  width: 350px;
+}
+
+#priceSortLowHigh {
+  background: #6C7E8B;
+  color: #FFFFFF;
+  width: 180px;
+  height: 40px;
+  font: 16px/24px Raleway;
+  clip-path: polygon(0 0, 85% 0%, 100% 100%, 0 100%);
+  text-align: left;
+}
+
+#priceSortHighLow {
+  background: lightgrey;
+  /*border: 1px solid #6C7E8B;*/
+  width: 190px;
+  height: 40px;
+  font: 16px/24px Raleway;
+  font-family: "Raleway Black";
+  color: #06263998;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+  text-align: right;
+  margin-left: -20px;
+}
+
+.pSearch {
+  padding: 10px 5px 0 5px;
+  font: 16px/24px Raleway;
+}
+
+#range_price #amount {
+  text-align: center;
+  border: 0;
+  color: #062639;
+  font: 700 24px/24px Raleway;
+}
+
+#range_price #slider-range {
+  margin-left: 20px;
+  width: 70%;
+  border-color: #062639;
+  cursor: pointer;
+}
+
+input {
+  box-sizing: border-box;
+  width: 371px;
+  height: 46px;
+  border: 1px solid #5F727E;
+  text-align: left;
+  padding: 20px 0 0 2px;
+  font: normal 13px/24px Raleway;
+  letter-spacing: 0;
+  color: #06263998;
+}
+
+#l1 {
+  float: right;
+}
+

@@ -1,0 +1,107 @@
+/* ===================Array of cars in two lines Styles========================*/
+
+#carsList {
+  display: flex;
+  width: 100%;
+  height: 950px;
+  overflow: hidden;
+  /*margin-top: 100px;*/
+  padding-left: 100px;
+
+}
+
+#carColumnLeft {
+  width: 550px;
+  padding-right: 20px;
+}
+
+
+#carColumnLeft img{
+  display: block;
+  width: 500px;
+  height: 300px;
+  margin-left: 0;
+  margin-right: auto;
+  /*margin-bottom: 40px;*/
+
+}
+
+
+#carColumnRight {
+  width: 550px;
+}
+
+#carColumnRight img{
+  display: block;
+  width: 500px;
+  height: 300px;
+  margin-left: 0;
+  margin-right: auto;
+  overflow: hidden;
+  /*margin-bottom: 40px;*/
+}
+
+.carInfo {
+  display: flex;
+  width: 500px;
+  margin-bottom: 30px;
+  /*align-items: flex-end;*/
+}
+
+.carTitle {
+  font: Bold 32px/38px Bebas Neue;
+  color: #062639;
+  width: 250px;
+  height: 32px;
+}
+
+.carYear {
+  font: Bold 24px/29px Bebas Neue;
+  color: #06263998;
+  width: 40px;
+  height: 32px;
+  padding-left: 10px;
+  padding-right: 25px;
+  padding-top: 6px;
+
+}
+
+.topPrice1 {
+  width: 130px;
+  height: 60px;
+  /*z-index: 2;*/
+  background: white;
+  margin-top: -20px;
+  margin-left: 30px;
+  box-shadow:  0px 3px 6px #00000052;
+  display: flex;
+}
+
+.currency {
+  font: Bold 21px/69px Raleway;
+  text-align: center;
+  color: #062639;
+  width: 20%;
+}
+
+.amount {
+  font: Bold 59px/71px Bebas Neue;;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #062639;
+  text-align: center;
+  width: 40%;
+
+}
+
+.perDay {
+  font: Bold 14px/19px Bebas Neue;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #06263998;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  padding: 10px;
+  width: 40%;
+}

@@ -1,0 +1,19 @@
+<!--////////////////////////////////////////This block for main picture and search form///////////////////////////////////////////////////////////-->
+<div class="image_reg">
+  <div class="main-image">
+    <img src="assets/images/742079-PSISLA-798.png">
+  </div>
+  <div class="reg">
+    <form style = "padding-left: 20%; alignment: center" [formGroup]="form" (ngSubmit)="submit()">
+      <p class="regLogSignTopHeader">Find your car now!</p>
+      <p class="regLogSignBotHeader">Type your data and hit Yalla!</p>
+      <input type="text" id="location" placeholder="Location">
+      <input type="text" id="from" placeholder="From">
+      <input type="text" id="till" placeholder="Till">
+      <button type="submit">Y’alla!</button>
+    </form>
+  </div>
+
+</div>
+
+<app-base-info></app-base-info>

@@ -1,0 +1,156 @@
+
+
+.bottom-header {
+  background: #062639;
+  width: 1920px;
+  height: 450px;
+  overflow: hidden;
+}
+
+/*===================Text + Icon ILCarro + Messangers ====================*/
+.topBotHeader {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  display: flex;
+  max-width:  100%;
+}
+
+.logo {
+  margin:auto;
+  width: 30%;
+}
+
+.messengers {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30%;
+}
+
+.messengers img {
+
+  width: 29px;
+  height: 29px;
+  margin: 0 19px;
+}
+
+/*=================== Everything below ====================*/
+.botBotHeader {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/*===================Text  THE ULTIMATE + Transformed Red Block ====================*/
+.redBlockText {
+  background: #EA2340;
+  width: 50%;
+  height: 350px;
+  margin-bottom: 0;
+  margin-top: auto;
+  -webkit-clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.bigText {
+  padding-left: 150px;
+  width: 30% ;
+  font: Bold 44px/54px Bebas Neue;
+  letter-spacing: 0;
+  color: white;
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+/*===================Navigation panel + cities + telephone and contact ====================*/
+
+.rightInfo {
+  width: 50%;
+}
+
+.navMenuBottom {
+  padding-right: 180px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 800px;
+  display: flex;
+}
+
+
+.navMenuBottom p{
+  font: Bold 16px/19px Raleway;
+  text-align: center;
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.line {
+  /*padding-right: 180px;*/
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-right: 180px;
+  width: 800px;
+  float: right;
+}
+
+.citiesAndTel {
+  width: 100%;
+  display: flex;
+}
+
+.cities {
+  width: 40%;
+  height: 55px;
+}
+
+.numberAndContact {
+  width: 60%;
+  height: 200px;
+
+}
+
+.topCities {
+  font: 16px/24px Raleway;
+  color: white;
+  padding-left: 40px;
+}
+.capitals {
+  -webkit-column-count: 2;
+  -webkit-column-width: min-content;
+  width: 250px;
+  padding-left: 40px;
+
+}
+
+.bigTextRed {
+  float: right;
+  width: 280px ;
+  font: Bold 44px/54px Bebas Neue;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  color: #EA2340;
+  padding-right: 180px;
+  text-align: right;
+
+
+}
+
+.descTextWhite {
+  padding-right: 180px;
+  float: right;
+  position: relative;
+  width: 230px;
+  font: 16px/24px Raleway;
+  letter-spacing: 0;
+  color: white;
+
+  /*padding-left: 180px;*/
+
+}
+
+.capitals a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font: 16px/24px Raleway;
+}

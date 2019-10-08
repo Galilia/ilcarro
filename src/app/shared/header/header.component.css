@@ -1,0 +1,49 @@
+
+.topNav {
+  position: relative;
+  background: #062639;
+  width: 1920px;
+  height: 80px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+
+
+.iconNav {
+  flex: 1;
+}
+
+.iconNav img {
+  padding-left: 20%;
+}
+
+.navMenu {
+  display: flex;
+  flex:1;
+  justify-content: center;
+}
+
+.topNav a {
+  float: right;
+  font: Bold 16px/19px Raleway;
+  padding: 14px 30px;
+  color: white;
+  text-decoration: none;
+}
+
+
+.topNav .active {
+  background-color: #EA2340;
+}
+
+.navMenu {
+  /*padding-left: 15%;*/
+}
+
+
+
+
+
+
+
