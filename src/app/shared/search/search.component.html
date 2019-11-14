@@ -1,57 +1,97 @@
 <div class="search_cars">
-
-  <div class="selMenu">
-    <div id="selMenu1" (click)="goToSearchPage();" >
-      <img id="imageInSelMenu1" src="assets/icons/search-icon.png">
+  <!--SEARCH NAV BAR-->
+  <div class="selMenu" *ngIf="currentSubMenu=='search'">
+    <div class="selMenu1" (click)="goToSearchPage();">
+      <img class="imageInSelMenu1" src="assets/icons/search-icon.png">
       <div class="textSelMenu" >Search</div>
     </div>
 
-    <div id="selMenu2" (click)="goToFilterPage();" >
-      <img id="imageInSelMenu2" src="assets/icons/settings_icon.png" >
+    <div class="selMenu2" (click)="goToFilterPage();">
+      <img class="imageInSelMenu2" src="assets/icons/settings_icon.png">
     </div>
 
-    <div id="selMenu3" (click)="goToMapPage();" >
-      <img id="imageInSelMenu3" src="assets/icons/coord-icon.png">
+    <div class="selMenu3" (click)="goToMapPage();">
+      <img class="imageInSelMenu3" src="assets/icons/coord-icon.png">
     </div>
+    <div class="selMenuLine" style="float: left"></div>
   </div>
-  <div id="selMenuLine"></div>
 
-<!--  <app-nav-search></app-nav-search>-->
+  <!--FILTER NAV BAR-->
+  <div class="selMenu" *ngIf="currentSubMenu=='filters'">
+    <div class="selMenu1" style="background-color: #062639" (click)="goToFilterPage();">
+      <img class="imageInSelMenu1" src="assets/icons/settings_icon.png">
+      <div class="textSelMenu">Filters</div>
+    </div>
+
+    <div class="selMenu2" style="background-color: #6C7E8B" (click)="goToMapPage();">
+      <img class="imageInSelMenu2" src="assets/icons/coord-icon.png">
+    </div>
+
+    <div class="selMenu3" style="background-color: #EA2340" (click)="goToSearchPage();">
+      <img class="imageInSelMenu3" src="assets/icons/search-icon.png">
+    </div>
+    <div class="selMenuLine" style="background-color: #062639"></div>
+  </div>
+
+  <!--MAP NAV BAR-->
+  <div class="selMenu" *ngIf="currentSubMenu=='map'">
+    <div class="selMenu1" style="background-color: #6C7E8B" (click)="goToMapPage();">
+      <img class="imageInSelMenu1" src="assets/icons/coord-icon.png">
+      <div class="textSelMenu">Map</div>
+    </div>
+
+    <div class="selMenu2" style="background-color: #062639" (click)="goToFilterPage();">
+      <img class="imageInSelMenu2" src="assets/icons/settings_icon.png">
+    </div>
+
+    <div class="selMenu3" style="background-color: #EA2340" (click)="goToSearchPage();">
+      <img class="imageInSelMenu3" src="assets/icons/search-icon.png">
+    </div>
+    <div class="selMenuLine" style="background-color: #6C7E8B"></div>
+  </div>
+
 
   <div class="searchAndCars" >
     <div class="reg" [ngSwitch]="currentSubMenu">
 
 <!--      SEARCH        -->
-      <div *ngSwitchDefault style = "padding-left: 20%; alignment: center">
+      <div id="menuSearch" *ngSwitchDefault>
         <p class="regLogSignTopHeader" style="margin-bottom: 20px;">Find your car now!</p>
-        <input type="text" id="location" placeholder="Location">
-        <input type="text" id="from" placeholder="From">
-        <input type="text" id="till" placeholder="Till">
+        <input type="text" id="location" placeholder="Location" (mouseout)="onLocation($event)">
+        <input type="datetime-local" id="from" placeholder="From" (mouseout)="onStartDate($event)">
+        <input type="datetime-local" id="till" placeholder="Till" (mouseout)="onEndDate($event)">
         <br>
         <br>
         <p class="pSearch" style="color: #6C7E8B;">Sort by</p>
-        <div id="priceSortSel">
-          <div id="priceSortLowHigh"><p class="pSearch">Price (low to high)</p></div>
-          <div id="priceSortHighLow"><p class="pSearch">Price (high to low)</p></div>
+        <div class="priceSortSel" *ngIf="buttSel==true; else elseBlock">
+          <div class="priceSortLowHigh"><p class="pSearch">Price (low to high)</p></div>
+          <div class="priceSortHighLow" (click)="onHighToLow()"><p class="pSearch">Price (high to low)</p></div>
         </div>
+        <ng-template #elseBlock>
+          <div class="priceSortSel">
+            <div class="priceSortLowHigh" (click)="onLowToHigh()" style="background: lightgrey"><p class="pSearch">Price
+              (low to high)</p></div>
+            <div class="priceSortHighLow" style="background: #6C7E8B"><p class="pSearch">Price (high to low)</p></div>
+          </div>
+        </ng-template>
         <div>
             <br><br><br><br>
             <div id="range_price">
               <span>Price range ($/per day):</span>
-              <input type="text" id="amount" readonly>
+              <p class="searchStyleInput">{{minValue}} - {{maxValue}}</p>
               <br><br>
-              <div id="slider-range"></div>
-
-          </div>
-          <div>
-
-          </div>
+            </div>
+        </div>
+        <div id="slider-range">
+          <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
+                      (valueChange)="onMinAmount()"
+                      (highValueChange)="onMaxAmount()"></ng5-slider>
         </div>
 
       </div>
 
 <!--      FILTERS        -->
-      <div *ngSwitchCase="'filters'" style = "padding-left: 20%; alignment: center">
+      <div id="menuFilters" *ngSwitchCase="'filters'">
         <p class="regLogSignTopHeader" style="margin-bottom: 20px;">Find your car now!</p>
         <li><input type="text" list="" placeholder="Make"></li>
         <li><input type="text" list="" placeholder="Model"></li>
@@ -65,8 +105,10 @@
       </div>
 
 <!--      MAP         -->
-      <div *ngSwitchCase="'map'">
-        <img src="assets/images/map.png" style="width: 600px; height: 900px">
+      <div id="menuMap" *ngSwitchCase="'map'">
+        <agm-map style="width: 600px; height: 900px" [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
       </div>
       <div id="l1" style="bottom: 0; margin-right: 10px;"></div>
     </div>

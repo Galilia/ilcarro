@@ -12,9 +12,10 @@ search_cars {
   clip-path: polygon(0 0, 85% 0%, 100% 100%, 0 100%);
   display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
-#selMenu1 {
+.selMenu1 {
   width: 300px;
   height: 50px;
   background: #EA2340 0% 0% no-repeat padding-box;
@@ -23,44 +24,44 @@ search_cars {
   align-items: center;
 }
 
-#selMenu2, #selMenu3 {
+.selMenu2, .selMenu3 {
   width: 150px;
   height: 40px;
   clip-path: polygon(0 0, 76% 0, 100% 100%, 24% 100%);
   margin-top: 8px;
 }
 
-#selMenu2 {
+.selMenu2 {
   background: #062639 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   margin-left: -38px;
 }
 
 
-#selMenu3 {
+.selMenu3 {
   background: #6C7E8B 0% 0% no-repeat padding-box;
   margin-left: -33px;
 }
 
-#selMenuLine {
+.selMenuLine {
   background: #EA2340 0% 0% no-repeat padding-box;
   width: 600px;
   height: 7px;
 }
 
-#imageInSelMenu1, #imageInSelMenu2, #imageInSelMenu3 {
+.imageInSelMenu1, .imageInSelMenu2, .imageInSelMenu3 {
   width: 25px; height: 25px;
 }
 
-#imageInSelMenu1 {
+.imageInSelMenu1 {
   padding-left: 180px;
 }
 
-#imageInSelMenu2 {
+.imageInSelMenu2 {
   padding-left: 85px; padding-top: 8px
 }
 
-#imageInSelMenu3 {
+.imageInSelMenu3 {
   padding-left: 85px; padding-top: 8px
 }
 
@@ -71,6 +72,18 @@ search_cars {
   color: #FFFFFF;
 }
 
+/* ================= SEARCH FILTERS MAP ===============*/
+
+#menuSearch, #menuFilters {
+  padding-left: 20%;
+  alignment: center;
+  height: 900px;
+}
+
+#menuMap {
+  alignment: center;
+
+}
 
 /*==============Searching Menu Styles=================*/
 
@@ -102,12 +115,12 @@ input[type=text], select {
   color: #06263998;
 }
 
-#priceSortSel {
+.priceSortSel {
   display: flex;
   width: 350px;
 }
 
-#priceSortLowHigh {
+.priceSortLowHigh {
   background: #6C7E8B;
   color: #FFFFFF;
   width: 180px;
@@ -117,7 +130,7 @@ input[type=text], select {
   text-align: left;
 }
 
-#priceSortHighLow {
+.priceSortHighLow {
   background: lightgrey;
   /*border: 1px solid #6C7E8B;*/
   width: 190px;
@@ -142,12 +155,21 @@ input[type=text], select {
   font: 700 24px/24px Raleway;
 }
 
-#range_price #slider-range {
-  margin-left: 20px;
-  width: 70%;
+#range_price, #slider-range {
+  /*margin-left: 20px;*/
+  width: 350px;
   border-color: #062639;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
+
+#range_price {
+  display: flex;
+}
+
+#range_price p {
+  padding-left: 90px;
+}
+
 
 input {
   box-sizing: border-box;
@@ -165,3 +187,22 @@ input {
   float: right;
 }
 
+.searchStyleInput {
+  font: Bold 24px/24px Raleway;
+  letter-spacing: 0;
+  color: #062639;
+  opacity: 1;
+}
+
+
+.ng5-slider .ng5-slider-bar {
+  height: 1px !important;
+}
+
+.ng5-slider .ng5-slider-bubble {
+  bottom: 0px !important;
+}
+
+.ng5-slider .ng5-slider-pointer {
+  background-color: black !important;
+}

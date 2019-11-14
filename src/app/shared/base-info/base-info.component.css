@@ -49,11 +49,12 @@
   color: white;
 }
 
-.righttext {
+.regLogSignTopHeader {
   padding-left: 150px;
   width: 30% ;
-  font: 32px/32px Raleway;
-  letter-spacing: 0;
+  /*font: 32px/32px Raleway;*/
+  /*letter-spacing: 0;*/
+  padding-top: 0;
   color: #EA2340;
 }
 

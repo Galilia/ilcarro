@@ -1,0 +1,68 @@
+<div class="image_reg">
+  <div class="main-image">
+    <img src="assets/images/742079-PSISLA-798.png" style="height: 100%; width: 100%">
+  </div>
+  <div class="reg">
+    <!-- LOG IN   -->
+    <div id="loginForm" *ngIf="isAuth==false">
+      <p class ="regLogSignTopHeader">Log in</p>
+      <p class ="regLogSignBotHeader">Type your data and hit Yalla!</p>
+      <form id="loginInput" [formGroup]="form" (ngSubmit)="login()">
+        <input type="text" id="email" placeholder="Email" formControlName="email">
+
+        <div *ngIf="form.get('email').invalid && form.get('email').touched"
+          class="validation">
+          <small *ngIf="form.get('email').errors.required">Email can't be empty</small>
+          <small *ngIf="form.get('email').errors.email">Email is not correct</small>
+          <small *ngIf="form.get('email').errors.uniqEmail">Email {{form.get('email').value}} already exists</small>
+        </div>
+
+        <input type="text" id="password" placeholder="Password" formControlName="password">
+
+        <div *ngIf="form.get('password').invalid && form.get('password').touched"
+          class="validation">
+          <small *ngIf="form.get('password').errors.required">Password can't be empty</small>
+          <small *ngIf="form.get('password').errors.minlength">Password should be not less then
+          {{form.get('password').errors.minlength.requiredLength}} symbols, write now:
+            {{form.get('password').errors.minlength.actualLength}}
+          </small>
+        </div>
+
+        <button type="submit" class="yallaButton" [disabled]="form.invalid">Y’alla!</button>
+      </form>
+      <!--      <h1 style="color: green; padding-left: 50px">{{responseMessage}}</h1>-->
+      <p id="reg_check">Forgot your password? <a href="#">Click here. </a></p>
+    </div>
+    <!-- LOGGED  -->
+    <div id="loggedForm" style="" *ngIf="isAuth==true">
+      <div id="loggedMenu">
+        <img src="assets/icons/user-icon.jpg" width="90" height="90">
+        <button class="yallaButton" (click)="getUserCar()">My Cars</button>
+        <button class="yallaButton" (click)="openUpdate()">Update Account</button>
+        <div *ngIf="isUpdate==true">
+          <form id="updateInput" [formGroup]="newForm" (ngSubmit)="login()">
+            <div id="updateWindow">
+              <input type="text" id="name" placeholder="Name" formControlName="newName">
+              <input type="text" id="lastName" placeholder="Last name" formControlName="newLastName">
+              <input type="text" id="newEmail" placeholder="Email" formControlName="newEmail">
+              <input type="text" id="newPassword" placeholder="Password" formControlName="newPassword">
+              <button class="yallaButton" (click)="update()">Update</button>
+            </div>
+          </form>
+        </div>
+        <button class="yallaButton" (click)="delete()">Delete Account</button>
+        <button class="yallaButton" (click)="logout()">Log Out</button>
+
+      </div>
+    </div>
+
+
+    <div id="l1">
+
+    </div>
+  </div>
+</div>
+
+
+
+<app-base-info></app-base-info>

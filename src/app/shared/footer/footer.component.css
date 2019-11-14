@@ -18,20 +18,22 @@
 
 .logo {
   margin:auto;
-  width: 30%;
+  width: 20%;
 }
 
 .messengers {
   margin-top: auto;
   margin-bottom: auto;
-  width: 30%;
+  width: 40%;
 }
 
-.messengers img {
-
+.messengers i {
   width: 29px;
   height: 29px;
-  margin: 0 19px;
+  margin: 0 0px;
+  color: white;
+  font-size: 2.0em;
+  padding-left: 80px;
 }
 
 /*=================== Everything below ====================*/

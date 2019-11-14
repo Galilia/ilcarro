@@ -5,7 +5,7 @@
     <a routerLinkActive="active" [routerLink]="['/search']">Search</a>
     <a routerLinkActive="active" [routerLink]="['/upload']">Let the car work</a>
     <a>Terms of use</a>
-    <a routerLinkActive="active" [routerLink]="['/sign-up']">Sign up</a>
-    <a routerLinkActive="active" [routerLink]="['/login']">Log in</a>
+    <a routerLinkActive="active" [routerLink]="['/register']">Sign up</a>
+    <a routerLinkActive="active" [routerLink]="['/login']" (click)="auth.login()">Log in</a>
   </div>
 </nav>
